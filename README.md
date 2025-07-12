@@ -1,4 +1,4 @@
-<h1 align="center">🚀 My Projects Repository</h1>
+<img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/2b2ffa17-7e6f-4a0e-9093-b5cd35591d12" /><h1 align="center">🚀 My Projects Repository</h1>
 <p align="center">
   💻 A growing collection of mini and major projects built with <strong>HTML, CSS, JavaScript</strong> and a whole lot of passion.
 </p>
@@ -15,7 +15,7 @@
 ---
 
 ### 📸 Preview
-![Attendance Tracker Screenshot](https://via.placeholder.com/800x400?text=Demo+Screenshot) <!-- Replace with actual screenshot if needed -->
+![Attendance Tracker Screenshot](https://raw.githubusercontent.com/Spikebolt76/Projects/refs/heads/main/docs/Attendance%20Tracker/Screenshot%202025-07-12%20112744.png) <!-- Replace with actual screenshot if needed -->
 
 ---
 
@@ -49,6 +49,6 @@
 ### 📂 Folder Structure
 projects/
 │
-├── attendance-tracker/
-│ ├── index.html
+├── attendance-tracker/ <br>
+│ ├── index.html  <br>
 │ └── script.js
