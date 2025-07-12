@@ -1,0 +1,14 @@
+<template id="itemTemplate">
+    <div class="item">Item</div>
+</template>
+<div id="myContainer"></div>
+
+<script>
+    const template = document.getElementById('itemTemplate').content;
+    const container = document.getElementById('myContainer');
+    for (let i = 0; i < 5; i++) {
+        const clone = template.cloneNode(true);
+        clone.querySelector('.item').textContent = `Item ${i + 1}`;
+        container.appendChild(clone);
+    }
+</script>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Tracker</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e6fcf1;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #032539;
+            line-height: 1.4;
+        }
+
+        .head-container {
+            background-color: #01110A;
+            color: #edfaf0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page-title h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .btn,
+        .grp-btn,
+        .present-btn,
+        .absent-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.2rem 0.5rem 0.2rem 0;
+            border: none;
+            border-radius: 0.25rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.1s, opacity 0.1s;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:hover,
+        .grp-btn:hover,
+        .present-btn:hover,
+        .absent-btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .btn:active,
+        .grp-btn:active,
+        .present-btn:active,
+        .absent-btn:active {
+            transform: translateY(1px);
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            background-color: #004623;
+            color: #dde7e3;
+        }
+
+        .btn.allAb {
+            background-color: #BA2D0B;
+            color: #f6f1f0;
+        }
+
+        .btn.reset {
+            background-color: #ed613e;
+            /* lighter engineering orange */
+            color: #f7efed;
+            box-shadow: 2px 2px 2px rgba(203, 132, 114, 0.5);
+        }
+
+        .grp-btn {
+            background-color: #BA2D0B;
+            color: #f7efed;
+            box-shadow: 2px 2px 2px rgba(203, 132, 114, 0.5);
+            margin-top: 0;
+        }
+
+        .present-btn {
+            background-color: #004623;
+            color: #dde7e3;
+        }
+
+        .absent-btn {
+            background-color: #BA2D0B;
+            color: #f6f1f0;
+        }
+
+        .container-1 {
+            padding: 2rem;
+        }
+
+        .list-container {
+            border: 2px solid #042217;
+            background-color: #d8f1e3;
+            border-radius: 0.5rem;
+            max-height: 540px;
+            overflow-y: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            background-color: #1e4b3a;
+            color: #dde7e3;
+            padding: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid #b9ccc4;
+            padding: 0.75rem;
+            text-align: center;
+            word-wrap: break-word;
+            vertical-align: middle;
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 30%;
+        }
+
+        .rollno {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e4b3a;
+        }
+
+        tr:focus {
+            outline: 3px solid #006d2a;
+            scroll-margin-top: 100px;
+            background-color: #b6d1c5;
+        }
+
+        @keyframes popFade {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .row-animate {
+            animation: popFade 0.3s ease forwards;
+        }
+    </style>
+
+
+</head>
+
+<body class="bodyCon">
+    <div class="main">
+        <div class="head-container">
+
+            <div class="page-title">
+                <h1>Student Attendance Tracker</h1>
+
+                <button class="btn allPr">All Present</button>
+                <button class="btn allAb">All Absent</button>
+                <button class="btn reset">Reset</button>
+                <button class="btn save">Save</button>
+            </div>
+
+            <div class="info">
+                <div class="info-1">
+                    <h3>BTech CSE - SEM 3</h3>
+                </div>
+                <div class="info-2" id="groupList">
+                    <button class="grp-btn gA">Group - A</button>
+                    <button class="grp-btn gB">Group - B</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-1">
+
+            <div class="list-container">
+
+                <table id="scrollable-div" tabindex="0">
+                    <thead>
+                        <tr>
+                            <th>Roll No.</th>
+                            <th>Name</th>
+                            <th>Enrollment No.</th>
+                            <th>stuID</th>
+                            <th>Attendance</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTableBody"> </tbody>
+
+                    <div id="defaultMessage"
+                        style="text-align: center; color: #4b7c5c; font-size: 1.3rem; margin-top: 2rem;">
+                        😴 Please select a group to begin.
+                    </div>
+
+                    <template id="studentRowTemplate">
+                        <tr tabindex="1">
+                            <td class="rollno"></td>
+                            <td class="name"></td>
+                            <td class="enrollment"></td>
+                            <td class="id"></td>
+                            <td>
+                                <button class="present-btn" type="button">Present</button>
+                                <button class="absent-btn" type="button">Absent</button>
+                            </td>
+                        </tr>
+                    </template>
+
+                </table>
+
+            </div>
+
+            <div class="display-container"> </div>
+
+        </div>
+
+        <div class="container-2"> </div>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>
