@@ -1,4 +1,4 @@
-<img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/2b2ffa17-7e6f-4a0e-9093-b5cd35591d12" /><h1 align="center">🚀 My Projects Repository</h1>
+<h1 align="center">🚀 My Projects Repository</h1>
 <p align="center">
   💻 A growing collection of mini and major projects built with <strong>HTML, CSS, JavaScript</strong> and a whole lot of passion.
 </p>
