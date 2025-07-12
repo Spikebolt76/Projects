@@ -15,7 +15,7 @@
 ---
 
 ### 📸 Preview
-![Attendance Tracker Screenshot](https://raw.githubusercontent.com/Spikebolt76/Projects/refs/heads/main/docs/Attendance%20Tracker/Screenshot%202025-07-12%20112744.png) <!-- Replace with actual screenshot if needed -->
+![Attendance Tracker Screenshot](https://github.com/Spikebolt76/Projects/blob/main/Attendance_Tracker/Screenshot%202025-07-12%20112744.png) <!-- Replace with actual screenshot if needed -->
 
 ---
 
