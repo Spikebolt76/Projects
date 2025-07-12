@@ -21,7 +21,7 @@
 
 ### 🌐 Live Demo
 > 🟢 Hosted via **GitHub Pages**  
-👉 [Click here to try it out!](https://your-username.github.io/attendance-tracker/)  
+👉 [Click here to try it out!](https://spikebolt76.github.io/Projects/Attendence_Tracker)  
 (*Replace the link with your actual GitHub Pages URL*)
 
 ---
