@@ -15,7 +15,7 @@
 ---
 
 ### 📸 Preview
-![Attendance Tracker Screenshot](https://via.placeholder.com/800x400?text=Demo+Screenshot) <!-- Replace with actual screenshot if needed -->
+![Attendance Tracker Screenshot](https://raw.githubusercontent.com/Spikebolt76/Projects/refs/heads/main/docs/Attendance%20Tracker/Screenshot%202025-07-12%20112744.png) <!-- Replace with actual screenshot if needed -->
 
 ---
 
@@ -49,6 +49,6 @@
 ### 📂 Folder Structure
 projects/
 │
-├── attendance-tracker/
-│ ├── index.html
+├── attendance-tracker/ <br>
+│ ├── index.html  <br>
 │ └── script.js
