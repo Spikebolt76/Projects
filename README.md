@@ -48,7 +48,7 @@
 
 ### 📂 Folder Structure
 projects/
-│
+│ <br>
 ├── attendance-tracker/ <br>
 │ ├── index.html  <br>
 │ └── script.js
