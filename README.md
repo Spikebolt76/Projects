@@ -15,13 +15,13 @@
 ---
 
 ### 📸 Preview
-![Attendance Tracker Screenshot](https://raw.githubusercontent.com/Spikebolt76/Projects/refs/heads/main/docs/Attendance%20Tracker/Screenshot%202025-07-12%20112744.png) <!-- Replace with actual screenshot if needed -->
+![Attendance Tracker Screenshot](https://github.com/Spikebolt76/Projects/blob/main/Attendance_Tracker/Screenshot%202025-07-12%20112744.png) <!-- Replace with actual screenshot if needed -->
 
 ---
 
 ### 🌐 Live Demo
 > 🟢 Hosted via **GitHub Pages**  
-👉 [Click here to try it out!](https://your-username.github.io/attendance-tracker/)  
+👉 [Click here to try it out!](https://spikebolt76.github.io/Projects/Attendance_Tracker)  
 (*Replace the link with your actual GitHub Pages URL*)
 
 ---
@@ -48,7 +48,7 @@
 
 ### 📂 Folder Structure
 projects/
-│
+│ <br>
 ├── attendance-tracker/ <br>
 │ ├── index.html  <br>
 │ └── script.js
