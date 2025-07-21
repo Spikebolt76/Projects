@@ -343,7 +343,7 @@ function renderList(arr) {
     const tbody = document.getElementById('studentTableBody');
     const template = document.getElementById('studentRowTemplate');
 
-    tbody.innerHTML = ''; 
+    tbody.innerHTML = '';
     
     const fragment = new DocumentFragment();
 
