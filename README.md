@@ -52,3 +52,8 @@ projects/
 ├── attendance-tracker/ <br>
 │ ├── index.html  <br>
 │ └── script.js
+
+
+--------------------------------------------------------------------------------------------------------
+
+https://roadmap.sh/projects/simple-tabs
