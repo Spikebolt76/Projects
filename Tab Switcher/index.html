@@ -78,6 +78,23 @@
         button:active {
             background-color: #e0e0e0;
         }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content:first-child {
+            display: block;
+        }
+
+        button {
+            border: none;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-btn:first-child button {
+            border-bottom-color: black;
+        }
     </style>
 </head>
 
@@ -149,6 +166,8 @@
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
