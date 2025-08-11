@@ -57,4 +57,6 @@ projects/
 ---
 ---
 
-https://github.io/Spikebolt76/Projects/Tab%20Switcher
+https://github.com/Spikebolt76/Projects/Tab%20Switcher
+
+https://spikebolt76.github.io/Projects/Tab%20Switcher
