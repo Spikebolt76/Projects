@@ -1,0 +1,178 @@
+/* 1. Variables & Base Reset */
+:root {
+  --clr-primary:   #005f73;
+  --clr-secondary: #0a9396;
+  --clr-accent:    #94d2bd;
+  --clr-bg:        #f0f0f0;
+  --clr-text:      #333;
+
+  --gap: clamp(1rem, 2vw, 2rem);
+  --radius: 0.5rem;
+  --transition: 0.3s ease;
+  --max-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--clr-text);
+  background: var(--clr-bg);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 2. Container Utility */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap) 0;
+}
+
+/* 3. Header / Navbar */
+.site-header {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0; z-index: 10;
+}
+
+.site-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  margin-top: 0.5rem;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: var(--gap);
+}
+
+.nav__list a {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: background var(--transition);
+}
+
+.nav__list a:hover {
+  background: var(--clr-bg);
+}
+
+/* 4. Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  transition: background var(--transition), color var(--transition),
+              border-color var(--transition);
+}
+
+.btn--primary {
+  background: var(--clr-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--clr-accent);
+}
+
+.btn--secondary {
+  background: #fff;
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+
+.btn--secondary:hover {
+  background: var(--clr-primary);
+  color: #fff;
+}
+
+/* 5. Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
+  color: #fff;
+  text-align: center;
+  padding: calc(var(--gap) * 2) 0;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero__content h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.hero__tagline {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  margin: var(--gap) 0;
+}
+
+/* 6. Steps (How It Works) */
+.steps__list {
+  margin-top: var(--gap);
+  padding-left: 1.5rem;
+}
+
+.steps__list li {
+  margin-bottom: var(--gap);
+}
+
+/* 7. Features Grid */
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap);
+  margin-top: var(--gap);
+}
+
+.features__grid article {
+  background: #fff;
+  padding: var(--gap);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform var(--transition);
+}
+
+.features__grid article:hover {
+  transform: translateY(-5px);
+}
+
+/* 8. Call to Action */
+.cta {
+  text-align: center;
+  padding: var(--gap) 0;
+  background: #fff;
+  margin-top: var(--gap);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 9. Footer */
+.site-footer {
+  background: #fff;
+  text-align: center;
+  padding: var(--gap) 0;
+  margin-top: var(--gap);
+  font-size: 0.9rem;
+}
+
+/* 10. Responsive Tweaks */
+@media (max-width: 600px) {
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

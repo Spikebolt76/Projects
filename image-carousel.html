@@ -113,11 +113,11 @@
             slides[index].scrollIntoView({ behavior: 'smooth' });
         }, 4000);
 
-        slider.addEventListener('scroll', () => {
-            const index = Math.round(slider.scrollLeft / slider.clientWidth);
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[index]?.classList.add('active');
-        });
+        // slider.addEventListener('scroll', () => {
+        //     const index = Math.round(slider.scrollLeft / slider.clientWidth);
+        //     dots.forEach(dot => dot.classList.remove('active'));
+        //     dots[index]?.classList.add('active');
+        // });
     </script>
 </body>
 
